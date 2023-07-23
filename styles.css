@@ -1,0 +1,235 @@
+:root{
+    --neutral: #55423d;
+    --base: #fffffe;
+    --stroke: #140d0b;
+    --paragraph: #fff3ec;
+    --secondary: #ffc0ad;
+    --main:#fff3ec;
+    --accent: #271c19;
+    --button: #271c19;
+    --buttontext:#ffc0ad;
+}
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: "montserrat";
+text-align: center;
+background-color: var(--neutral);
+}
+
+h1,h2,h3,h4,h5,h5{
+    font-family: "montserrat";
+}
+
+
+h1{
+    font-size: 60px;
+}
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+top: 0;
+width: 100%;
+background-color: var(--neutral);
+padding: 20px 0;
+font-size: 20px;
+border-bottom: 1px solid var(--stroke);
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    font-family: "montserrat";
+
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    color:var(--base);
+    padding: 0 10px;
+
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+section{
+padding: 70px 0;
+min-height: 100vh;
+
+
+}
+
+#welcome-section{
+    background-color: var(--neutral);
+    color: var(--base);
+    display: flex;
+    flex-direction:column;
+}
+
+
+#welcome-section h1{
+    margin-top:30vh;
+}
+
+
+#welcome-section p{
+    color: var(--paragraph);
+    font-size: 25px;
+    margin: 25px 0;
+    font-style: italic;
+}
+
+#projects .project-tile{
+height: 525px;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: var(--neutral);
+color:white;
+border-radius: 5px;
+box-shadow: 8px 8px 10px 5px rgba(100,100,100, 0.4);
+text-decoration: none;
+padding: 0px 0px 20px ;
+text-align: center;
+
+
+}
+
+#projects .project-tile img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+#projects .projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px ,1fr));
+    gap: 30px;
+    padding: 20px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+#projects{
+    background-color: var(--main);
+    color: var(--neutral);
+
+    
+}
+#projects h1{
+    border-bottom: 3px solid var(--neutral);
+    width: fit-content;
+    margin: auto;
+    font-size: 350%;
+    font-weight: 600;
+}
+
+#projects .project-tile p{
+    font-size: 25px;
+    padding: 10px;
+   
+
+
+}
+
+
+#projects .project-tile span {
+    opacity: 3%;
+    padding: 0 5px;
+
+}
+
+#projects .project-tile:hover span {
+  opacity: 100%;
+   color: var(--base);
+  transition: opacity 0.35 ease-in-out;
+
+}
+
+.show-all{
+    text-decoration: none;
+    display: flex;
+    width: max-content;
+    margin: auto;
+    padding: 0px 15px;
+    background-color: var(--neutral);
+    color: var(--base);
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  1s ease-in;
+       
+
+}
+
+.show-all:hover{
+    background-color: var(--button);
+    color: var(--paragraph);
+}
+
+#contact{
+    background-color: var(--base);
+    color: var(--neutral);
+}
+
+
+#contact .social-medias{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 30px;
+    justify-content: space-around;
+   
+
+}
+
+#contact .social-media{
+    text-decoration: none;
+    color: var(--button);
+    transition: transform 0.2s ease-in;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+    
+    
+
+
+
+}
+
+#contact .social-media:hover{
+    transform: translateY(10px);
+}
+
+footer{
+    border-top: 3px solid var(--button);
+    color: var(--base);
+    font-size: 25px;
+    padding: 10px;
+    opacity: 50%;
+
+}
+
+@media only screen and (width < 700px){
+    h1{
+        font-size: 50px;
+    }
+
+    #projects .project-tile{
+        height: 600px;
+        width: 100px;
+    }
+}
